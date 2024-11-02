@@ -1,68 +1,92 @@
 import styles from "./footer.module.css";
-import logoIcon from "../../assets/Icon.png";
+import logoIcon from "../../assets/image.png"; // Make sure to update the path to the logo if necessary
 import { useNavigate } from "react-router";
 
 const Footer = () => {
   const navigate = useNavigate();
 
   return (
-    <div className={styles.footer}>
+    <footer className={styles.footer}>
+      {/* Optional Background Image */}
       <div className={styles.footer_image}>
         <h2>
-          Follow me on
-          <a
-            href="https://www.linkedin.com/in/the-mustafa-khaled/"
-            target="_blank">
-            Linked In
-          </a>
+          Follow us on 
+          <a href="https://www.linkedin.com/in/the-mustafa-khaled/" target="_blank">Linked In</a>
         </h2>
       </div>
-      <div className={`${styles.footer_content} container `}>
-        <div>
-          <div className={styles.logo_holder}>
-            <img src={logoIcon} alt="Logo Icon" />
-
-            <h3>Strengthy</h3>
-          </div>
-          <p>
-            It is a long established fact that a reader will be distracted by
-            the readable.
+      <div className={styles.footer_content}>
+        {/* Footer Column 1: Logo and Tagline */}
+        <div className={styles.logo_holder}>
+          <a href="#" className={styles.footer__logo}>
+            <img src={logoIcon} alt="Energifit logo" />
+          </a>
+          <p className={styles.footer__tagline}>
+            
           </p>
-          <div className={styles.info}>
-            <span>Call :</span>
-            <p>+201151747091</p>
-            <span>Email :</span>
-            <p>mustafakhaledinfo@gmail.com</p>
-          </div>
         </div>
+
+        {/* Footer Column 2: Contact Info */}
         <div>
-          <ul>
-            <li>Utility Pages</li>
-            <li onClick={() => navigate("/calculator")}>BMI Calculator</li>
-            <li onClick={() => navigate("/schedule")}>Schedule</li>
-            <li onClick={() => navigate("/errorPage")}>404 Page</li>
-            <li>Password Protected</li>
-            <li>Licenses</li>
-            <li onClick={() => navigate("/contact")}>Contact</li>
+          <h4>Contact Us</h4><br />
+          <ul className={styles.footer__contact}>
+            <li>
+              <a href="tel:+910987654321">
+                <i className="ri-phone-line"></i> +91 0987654321
+              </a>
+            </li>
+            <li>
+              <a href="https://goo.gl/maps/xyz">
+                <i className="ri-map-pin-line"></i> New Delhi, India
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@energifit.com">
+                <i className="ri-mail-line"></i> info@energifit.com
+              </a>
+            </li>
           </ul>
         </div>
+
+        {/* Footer Column 3: Quick Links */}
         <div>
-          <h3>Newsletter</h3>
-          <input type="text" placeholder="Enter Your Email" />
-          <button>Subscribe</button>
-          <div className={styles.footer_icons}>
-            <a
-              href="https://www.linkedin.com/in/the-mustafa-khaled/"
-              target="_blank">
-              <i className="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/mustafa-khaled" target="_blank">
-              <i className="fa-brands fa-github"></i>
-            </a>
-          </div>
+          <h4>Quick Links</h4><br />
+          <ul className={styles.footer__links}>
+            <li><a href="#" onClick={() => navigate("/")}>Home</a></li>
+            <li><a href="#about" onClick={() => navigate("/about")}>About</a></li>
+            <li><a href="#programs" onClick={() => navigate("/programs")}>Programs</a></li>
+            <li><a href="#trainers" onClick={() => navigate("/trainers")}>Trainers</a></li>
+            <li><a href="#contact-us" onClick={() => navigate("/contact")}>Contact</a></li>
+          </ul>
+        </div>
+
+        {/* Footer Column 4: Social Media Links */}
+        <div>
+          <h4>Follow Us</h4><br />
+          <ul className={styles.footer__social_links}>
+            <li>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+
+      {/* Footer Bottom Bar */}
+      <div className={styles.footer__bar}>
+        Copyright © 2024 Energifit. All rights reserved.
+      </div>
+    </footer>
   );
 };
 

@@ -1,121 +1,119 @@
 .footer {
-  background-color: var(--three);
-  color: var(--four);
+  background-color: var(--three); /* Background color for the footer */
+  color: var(--four); /* Text color */
+  padding: 20px 0; /* Padding around the footer */
 }
 
 .footer_image {
-  background-image: url(../../assets/footer.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 30vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-image: url(../../assets/footer.jpg); /* Background image */
+  background-size: cover; /* Cover the entire area */
+  background-repeat: no-repeat; /* No repetition */
+  height: 30vh; /* Set height */
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  color: var(--white); /* Text color in this section */
+  text-align: center; /* Center text */
 }
 
 .footer_image h2,
 .footer_image a {
-  color: var(--white);
+  color: var(--white); /* Color for headings and links */
 }
 
 .footer_image a {
-  margin-left: 10px;
-  text-decoration: underline;
+  margin-left: 10px; /* Margin for links */
+  text-decoration: underline; /* Underline for links */
 }
 
 .footer_content {
-  padding: 50px 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 40px;
+  padding: 50px 0; /* Padding for footer content */
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); /* Responsive columns */
+  gap: 40px; /* Space between columns */
 }
 
 .footer_content > div {
-  padding: 20px;
+  padding: 20px; /* Padding for each footer column */
 }
 
-.footer_content > div:first-of-type img {
-  width: 30px;
-}
-
+/* Adjusted logo holder dimensions and alignment */
 .logo_holder {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--white);
+  display: flex; /* Flex layout for logo and tagline */
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Space between logo and tagline */
+  width: 100%; /* Full width to align with other content */
+  padding: 0; /* Remove padding to align with other divs */
+  box-sizing: border-box; /* Ensure padding doesn’t affect alignment */
 }
 
-.footer_content > div:first-of-type > p {
-  margin: 20px 0;
+.footer__logo img {
+  width: 100%; /* Ensures the logo image fills the container */
+  height: auto; /* Maintains aspect ratio */
 }
 
-.info {
-  padding: 10px;
-  border: 1px solid var(--four);
-  background-color: var(--five);
+.footer__tagline {
+  margin: 10px 0; /* Reduced margin for a more compact look */
+  font-size: 0.9rem; /* Slightly smaller text size */
 }
 
-.info span {
-  color: var(--one);
-  display: block;
-  margin: 10px 0;
+.footer__contact,
+.footer__links,
+.footer__social_links {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
 }
 
-.footer_content > div:nth-child(2) ul li {
-  cursor: pointer;
-  margin-bottom: 20px;
+.footer__contact li,
+.footer__links li,
+.footer__social_links li {
+  cursor: pointer; /* Pointer on hover */
+  margin-bottom: 15px; /* Space between list items */
 }
 
-.footer_content > div:nth-child(2) ul li:first-of-type {
-  color: var(--white);
-  cursor: none;
+.footer__contact li a,
+.footer__links li a,
+.footer__social_links li a {
+  color: var(--four); /* Text color for links */
+  text-decoration: none; /* No underline */
 }
 
-.footer_content > div:nth-child(2) ul li:hover {
-  color: var(--white);
+.footer__contact li a:hover,
+.footer__links li a:hover,
+.footer__social_links li a:hover {
+  color: var(--white); /* Change color on hover */
 }
 
-.footer_content > div:last-of-type h3 {
-  color: var(--white);
+.footer__social_links {
+  display: flex; /* Flex layout for social links */
 }
 
-.footer_content > div:last-of-type input {
-  display: block;
-  margin: 20px 0;
-  padding: 10px;
-  background-color: var(--five);
-  border: none;
-  outline: none;
+.footer__social_links li {
+  margin-right: 10px; /* Space between icons */
 }
 
-.footer_content > div:last-of-type button {
-  background-color: var(--one);
-  margin-bottom: 20px;
+.footer__bar {
+  text-align: center; /* Center text */
+  margin-top: 20px; /* Margin above the bar */
+  color: var(--four); /* Text color */
 }
 
-.footer_content > div:last-of-type button:hover {
-  color: var(--white);
+.footer__bar:hover {
+  color: var(--white); /* Change color on hover */
 }
 
-.footer_content > div:last-of-type button::before {
-  background-color: var(--three);
-}
-
+/* Icons styling */
 .footer_icons i {
-  font-size: 20px;
-  color: var(--white);
-}
-
-.footer_icons i:first-of-type {
-  margin-right: 10px;
+  font-size: 20px; /* Icon size */
+  color: var(--white); /* Icon color */
 }
 
 .footer_icons i:hover {
-  color: var(--four);
+  color: var(--four); /* Icon color on hover */
 }
 
 @media (max-width: 380px) {
   .footer_content {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjust for smaller screens */
   }
 }
