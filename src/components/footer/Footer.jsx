@@ -10,7 +10,7 @@ const Footer = () => {
       {/* Optional Background Image */}
       <div className={styles.footer_image}>
         <h2>
-          Follow us on 
+          Follow us on
           <a href="https://www.linkedin.com/in/the-mustafa-khaled/" target="_blank">Linked In</a>
         </h2>
       </div>
@@ -21,7 +21,7 @@ const Footer = () => {
             <img src={logoIcon} alt="Energifit logo" />
           </a>
           <p className={styles.footer__tagline}>
-            
+
           </p>
         </div>
 
